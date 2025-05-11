@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Subtitle Logger",
+    "version": "1.0",
+    "description": "Logs subtitles from tv-player.",
+    "permissions": ["scripting", "activeTab"],
+    "host_permissions": ["<all_urls>"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "action": {
+      "default_title": "Subtitle Logger"
+    }
+  }
+  
